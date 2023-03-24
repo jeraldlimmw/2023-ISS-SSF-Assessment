@@ -13,7 +13,7 @@ public class AuthenticationRepository {
 	// TODO Task 5
 	// Use this class to implement CRUD operations on Redis
 	public void disableUser(String username) {
-		redisTemplate.opsForValue().set(username, "locked", 30);
+		redisTemplate.opsForValue().set(username, "locked", 1800);
 	}
 
 	public boolean isLocked(String username) {
